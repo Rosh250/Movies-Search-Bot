@@ -11,7 +11,7 @@ api_key = "f662ed917c99079b975b71f63741102d0f4a3824"
 def search_movies(query):
     movies_list = []
     movies_details = {}
-    website = BeautifulSoup(requests.get(f"https://filmyzilla/?s={query.replace(' ', '+')}").text, "html.parser")
+    website = BeautifulSoup(requests.get(f"https://myfilmyzilla/?s={query.replace(' ', '+')}").text, "html.parser")
     movies = website.find_all("a", {'class': 'ml-mask jt'})
     for movie in movies:
         if movie:
