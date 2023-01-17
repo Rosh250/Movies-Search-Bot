@@ -34,7 +34,7 @@ def get_movie(query):
         links = movie_page_link.find_all("a", {'rel': 'noopener', 'data-wpel-link': 'internal'})
         final_links = {}
         for i in links:
-            url = f"https://bitly.com/api?api={f662ed917c99079b975b71f63741102d0f4a3824}&url={i['href']}"
+            url = f"https://atglinks.com/api?api={2bba0b74cbb4e5f1d772b91ad14f119831de23e3}&url={i['href']}"
             response = requests.get(url)
             link = response.json()
             final_links[f"{i.text}"] = link['shortenedUrl']
